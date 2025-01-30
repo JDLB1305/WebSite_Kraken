@@ -1,0 +1,56 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.fondo {
+    width: 40%;
+    margin: 30px;
+}
+
+.contenedor {
+    background-color: #0000008a;
+    display: flex;
+    margin: 55px;
+    padding: 15px;
+    border-radius: 40px;
+    height: 480px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 40%;
+    margin: 30px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnhome {
+    background-color: #c41f2f;
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    font-size: x-large;
+    border: solid black 3px;
+    border-radius: 15px;
+    width: 29%;
+    -webkit-box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
+    height: 80px;
+}

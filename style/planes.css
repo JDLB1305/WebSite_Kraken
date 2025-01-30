@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background-color: #902407;
+}
+
+.cabezera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logOjo {
+    width: 10%;
+}
+
+.textoCab {
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+h2 {
+    color: #f9c60e;
+    font-size: 40px;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 0px;
+    color: white;
+}
+
+.planes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px;
+}
+
+.card-header {
+    background: linear-gradient(90deg, #3c0762, #ff00e5);
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    margin-bottom: 20px;
+    color: white;
+    width: 10%;
+    position: absolute;
+    margin: 3px 8px 0px 73px;
+  }
+
+.contPlan {
+text-align: center;
+}
+
+.plan {
+    width: 70%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    border: solid white 1px;
+    border-radius: 30px;
+    background-color: transparent; 
+    box-shadow: inset 90px -50px 50px -40px #ffffff8f;;
+}
+
+ul {
+    text-align: center;
+    padding: 15px;
+}
+
+li {
+    margin: 15px;
+    font-size: 20px;
+}
+
+.precio {
+    text-align: center;
+}
+
+span {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
+}
+
+.inscripcion {
+    background: white;
+    color: black;
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 40px;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
