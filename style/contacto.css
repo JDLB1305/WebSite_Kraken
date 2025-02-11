@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    font-size: 40px;
+}
+
+.contContacto {
+    background-color: #f2f2f2;
+    padding: 30px;
+    margin: 30px;
+}
+
+.contForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 45%;
+}
+
+form label {
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    height: 35px;
+}
+
+.casillas {
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contInfo {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.contInfo h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contInfo p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
