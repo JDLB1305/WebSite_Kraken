@@ -1,7 +1,15 @@
+/* Estilos base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 h1 {
@@ -10,13 +18,77 @@ h1 {
     font-size: 40px;
 }
 
-.contHistoria {
-    width: 100%;
-}
-
 h2 {
     font-size: 30px;
-    padding-left: 40px;
+    color: #f44336;
+    border-bottom: 2px solid #f44336;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    margin: 20px 30px 0px 40px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.fade-in.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.fade-in.delay-4 {
+    animation-delay: 1.2s;
+}
+
+.fade-in.delay-5 {
+    animation-delay: 1.5s;
+}
+
+/* Sección de Historia */
+.contHistoria {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.contHistoria::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0 0 0 / 85%);
+    z-index: 1;
+}
+
+.contHistoria * {
+    position: relative;
+    z-index: 2;
 }
 
 .contenido {
@@ -40,11 +112,28 @@ article p {
     margin-bottom: 20px;
 }
 
-img {
+.imgHistoria {
     width: 90%;
-    margin: 0px 20px 0px 20px;
+    margin: 50px 20px 0px 20px;
 }
 
+/* Botón de inscripción */
+.btn-inscribirse {
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscribirse:hover {
+    background-color: #005bb5;
+}
+
+/* Sección de Instalaciones */
 .lugar {
     text-align: center;
     margin-bottom: 40px;
@@ -62,6 +151,7 @@ h3 {
     text-align: center;
 }
 
+/* Sección de Entrenadores */
 .entrenadores {
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +164,12 @@ h3 {
     text-align: center;
     width: 410px;
     padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contEntrenador:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .imagenTrainer {
@@ -84,4 +180,103 @@ h3 {
 h4 {
     font-size: x-large;
     margin: 15px 0px 15px;
+}
+
+/* Sección de Valores */
+#mision p {
+    padding: 40px;
+}
+
+.valores {
+    padding: 20px;
+}
+
+.valores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valores ul li {
+    margin: 15px 0;
+    font-size: 1.1em;
+    padding-left: 30px;
+    position: relative;
+}
+
+.valores ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.valores ul li:nth-child(1)::before {
+    background-image: url('./images/icono-disciplina.png'); /* Icono personalizado */
+}
+
+.valores ul li:nth-child(2)::before {
+    background-image: url('./images/icono-respeto.png'); /* Icono personalizado */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 85%;
+    max-width: 600px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-contenido h2 {
+    font-size: 30px;
+    color: #f44336;
+    border-bottom: 2px solid #f44336;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: #0073e6;
+}
+
+.imagenTrainer-modal {
+    width: 50%;
+    border-radius: 50%;
+    margin: 15px auto;
+    display: block;
 }
