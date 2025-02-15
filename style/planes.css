@@ -53,12 +53,12 @@ h3 {
     border-radius: 30px;
     padding: 10px;
     font-weight: bold;
-    /* text-transform: uppercase; */
     margin-bottom: 20px;
     color: white;
     width: 10%;
     position: absolute;
     margin: 3px 8px 0px 73px;
+    z-index: 1;
   }
 
 .contPlan {
@@ -77,7 +77,28 @@ text-align: center;
     border: solid white 1px;
     border-radius: 30px;
     background-color: transparent; 
-    box-shadow: inset 90px -50px 50px -40px #ffffff8f;;
+    box-shadow: inset 90px -50px 50px -40px #ffffff8f;
+}
+
+/* Efecto de tambaleo */
+@keyframes tambalear {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.plan {
+    animation: tambalear 0.5s ease-in-out 5; /* Repite 5 veces */
+    animation-delay: 1s; /* Retraso de 3 segundos entre cada repetición */
 }
 
 ul {
