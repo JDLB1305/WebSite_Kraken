@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado de la Donación - Club Kraken</title>
+  <link rel="stylesheet" href="./style/donacion.css">
+  <link rel="stylesheet" href="./style/navbar.css">
+  <!-- Incluimos SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <section class="resultado">
+    <h2>Resultado de la Transacción</h2>
+    <!-- Puedes agregar más contenido o diseño según tus necesidades -->
+  </section>
+
+  <footer>
+    <h3>Redes Sociales</h3>
+    <div class="redes">
+      <div>
+        <a href="https://www.facebook.com/krakenclubdenatacion/?locale=az_AZ" target="_blank" rel="noopener noreferrer">
+          <img src="./images/facebook.png" alt="Icono de Facebook">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/kraken.natacion/?hl=es-la" target="_blank" rel="noopener noreferrer">
+          <img src="./images/instagram.png" alt="Icono de Instagram">
+        </a>
+      </div>
+      <div>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="./images/youtube.png" alt="Icono de YouTube">
+        </a>
+      </div>
+    </div>
+    <div class="textoFooter">
+      <p>&copy; 2024 natacionkraken - Todos los derechos reservados.</p>
+      <p>Primero Personas luego Nadadores</p>
+    </div>
+  </footer>
+
+  <script>
+    // Función para obtener parámetros de la URL
+    function getQueryParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const queries = queryString.split("&");
+
+      queries.forEach(query => {
+        const [key, value] = query.split("=");
+        params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+      });
+      return params;
+    }
+
+    // Obtenemos los parámetros 'response' y 'confirmation'
+    const params = getQueryParams();
+    const response = params.response || "No se recibió respuesta";
+    const confirmation = params.confirmation || "No se recibió confirmación";
+
+    // Mostrar la información usando SweetAlert2
+    Swal.fire({
+      title: 'Información de la Transacción',
+      html: `<p><strong>Response:</strong> ${response}</p>
+             <p><strong>Confirmation:</strong> ${confirmation}</p>`,
+      icon: 'info',
+      confirmButtonText: 'Aceptar'
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Formulario de donaciones */
+.formulario-donaciones {
+    background: #fff;
+    padding: 40px 40px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario-donaciones h2 {
+    color: firebrick;
+    margin-bottom: 20px;
+}
+
+.formulario-donaciones label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.formulario-donaciones input,
+.formulario-donaciones textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.formulario-donaciones button {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario-donaciones button:hover {
+    background: #005bb5;
+}

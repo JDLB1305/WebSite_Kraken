@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones - Club Kraken</title>
+    <link rel="stylesheet" href="./style/donacion.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <a href="./index.html" class="btn btn-outline-danger" style="margin-top: 15px;width: 12%;margin-left: -64em;">
+        <p class="bi bi-house-door" style="margin-bottom: 0rem;"> Volver al Inicio</p>
+    </a>
+
+    <section class="formulario-donaciones">
+        <h2>Haz tu donación</h2>
+        <form id="formularioDonacion">
+            <label for="monto">Monto de la donación (COP):</label>
+            <input type="number" id="monto" name="monto" min="1" placeholder="Ej: 50000" required>
+    
+            <!-- Botón dinámico para ePayco -->
+            <div id="epayco-button-container"></div>
+    
+            <button type="button" id="btnProcesarDonacion">Procesar donación</button>
+            <p id="mensajeError" style="color: red; display: none;">Por favor, ingresa un monto válido (mínimo 1 COP).</p>
+        </form>
+    </section>
+
+    <footer>
+        <h3>Redes Sociales</h3>
+        <div class="redes">
+            <div>
+                <a href="https://www.facebook.com/krakenclubdenatacion/?locale=az_AZ" target="_blank" rel="noopener noreferrer">
+                    <img src="./images/facebook.png" alt="Icono de Facebook">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/kraken.natacion/?hl=es-la" target="_blank" rel="noopener noreferrer">
+                    <img src="./images/instagram.png" alt="Icono de Instagram">
+                </a>
+            </div>
+            <div>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="./images/youtube.png" alt="Icono de YouTube">
+                </a>
+            </div>    
+        </div>
+        <div class="textoFooter">
+            <p>&copy; 2024 natacionkraken - Todos los derechos reservados.</p>
+            <p>Primero Personas luego Nadadores</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('btnProcesarDonacion').addEventListener('click', function () {
+            const monto = parseFloat(document.getElementById('monto').value);
+            const mensajeError = document.getElementById('mensajeError');
+            const epaycoContainer = document.getElementById('epayco-button-container');
+
+            // Validaciones
+            if (isNaN(monto) || monto <= 0) {
+                mensajeError.textContent = 'Por favor, ingresa un monto válido.';
+                mensajeError.style.display = 'block';
+                return;
+            }
+            if (monto > 1000000) {
+                mensajeError.textContent = 'El monto máximo permitido es 1,000,000 COP.';
+                mensajeError.style.display = 'block';
+                return;
+            }
+
+            mensajeError.style.display = 'none';
+
+            // Limpiar cualquier botón previo
+            epaycoContainer.innerHTML = '';
+
+            // Insertar dinámicamente el script de ePayco
+            const script = document.createElement('script');
+            script.src = 'https://checkout.epayco.co/checkout.js';
+            script.className = 'epayco-button';
+            script.dataset.epaycoKey = 'fafac4a65524a9c2c1c72bf9a2d0c6da';
+            script.dataset.epaycoAmount = monto.toString();
+            script.dataset.epaycoTax = '0.00';
+            script.dataset.epaycoTaxIco = '0.00';
+            script.dataset.epaycoTaxBase = monto.toString();
+            script.dataset.epaycoName = 'Donación Club Kraken';
+            script.dataset.epaycoDescription = `Donación de ${monto} COP`;
+            script.dataset.epaycoCurrency = 'cop';
+            script.dataset.epaycoCountry = 'CO';
+            script.dataset.epaycoTest = 'false';
+            script.dataset.epaycoExternal = 'false';
+            script.dataset.epaycoResponse = '';
+            script.dataset.epaycoConfirmation = '';
+            script.dataset.epaycoButton = 'https://multimedia.epayco.co/dashboard/btns/btn5.png';
+
+            epaycoContainer.appendChild(script);
+
+            // Deshabilitar el botón para evitar múltiples clics
+            this.disabled = true;
+            this.textContent = 'Procesando...';
+        });
+    </script>
+</body>
+</html>

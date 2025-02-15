@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Sección de servicios */
+.servicios {
+    text-align: center;
+}
+
+.servicios h1 {
+    font-size: 3em;
+    margin: 40px 0px -20px;
+}
+
+.servicios p {
+    font-size: 1.2em;
+    margin-bottom: 60px;
+}
+
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.servicio {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.servicio .icono {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.icono img{
+    width: 40%;
+}
+
+.servicio h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #0073e6;
+}
+
+.servicio p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Sección Únete */
+.unete {
+    background: #f44336;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 20px;
+}
+
+.unete h2 {
+    font-size: 2em;
+    margin: 0 0 20px;
+}
+
+.unete p {
+    font-size: 1.2em;
+    margin: 0 0 30px;
+}
+
+.btn-unete {
+    background: #fff;
+    color: #f44336;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-unete:hover {
+    background: transparent;
+    border: white 2px solid;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .servicio {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio {
+        width: 100%;
+    }
+}
