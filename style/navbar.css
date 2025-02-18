@@ -1,7 +1,12 @@
 * {
-    font-family: "Nunito", serif;
     font-optical-sizing: auto;  
     font-style: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Nexa Bold.otf') format('opentype');
 }
 
 nav {
@@ -36,7 +41,7 @@ nav ul li a {
 }
 
 nav .logoNav {
-    width: 5%;
+    width: 10%;
 }
 
 /* Footer */

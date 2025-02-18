@@ -1,10 +1,16 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Define custom font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('Nexa Bold.otf') format('opentype');
 }
 
 body {
-    background-image: url(../images/fondo.jpg);
+    background-image: url(../images/fondoHome.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,19 +36,21 @@ body {
 }
 
 .logo {
-    width: 40%;
-    margin: 30px;
-}
+    width: 30%;
+/*     margin: 30px;
+ */}
 
 .botones {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: -50px;
 }
 
 .botones a {
     text-decoration: none;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btnhome {
