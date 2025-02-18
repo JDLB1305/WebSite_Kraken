@@ -6,8 +6,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('Nexa Bold.otf') format('opentype');
+}
+
 body {
     background-color: #902407;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cabezera {
