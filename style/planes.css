@@ -23,7 +23,7 @@ body {
 }
 
 .logOjo {
-    width: 10%;
+    width: 20%;
 }
 
 .textoCab {
@@ -32,7 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
 }
 
 h2 {
@@ -109,16 +108,19 @@ text-align: center;
 
 ul {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 li {
     margin: 15px;
     font-size: 20px;
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
 }
 
 .precio {
     text-align: center;
+    margin-top: 30px;
 }
 
 span {

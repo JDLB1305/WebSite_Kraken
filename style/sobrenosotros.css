@@ -7,12 +7,18 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Nexa';
     src: url('Nexa Bold.otf') format('opentype');
+    font-weight: bold; /* Especifica que esta es la versión en negrita */
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa Light.otf') format('opentype');
+    font-weight: normal; /* Especifica que esta es la versión normal (light) */
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -116,98 +122,140 @@ article p {
     font-size: 20px;
     text-align: justify;
     margin-bottom: 20px;
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
 }
 
 .imgHistoria {
-    width: 90%;
+    width: 85%;
     margin: 50px 20px 0px 20px;
 }
 
-/* Sección de Logros */
+/* Contenedor principal de la línea de tiempo */
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
+    padding: 100px 0px 0px;
 }
 
+/* Línea central de la línea de tiempo */
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    height: 6px;
     background-color: #f44336;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+    top: 43%;
+    left: 2%;
+    right: 0;
+    transform: translateY(-50%);
     border-radius: 3px;
+    z-index: -1;
+    width: 98%;
 }
 
+/* Cada elemento de la línea de tiempo */
 .timeline-item {
-    padding: 10px 40px;
+    display: inline-block; /* Hace que los elementos se alineen horizontalmente */
+    margin: 0 20px; /* Espaciado entre elementos */
     position: relative;
-    width: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    flex-shrink: 0; /* Evita que los elementos se reduzcan */
 }
 
+/* Alternar posición de las cajas */
+.timeline-item:nth-child(odd) {
+    top: -1px; /* Mueve las cajas impares hacia arriba */
+}
+
+.timeline-item:nth-child(even) {
+    top: 0px; /* Mueve las cajas pares hacia abajo */
+}
+
+/* Puntos de la línea de tiempo */
 .timeline-item::after {
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -13px;
     background-color: #fff;
     border: 4px solid #f44336;
-    top: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1;
 }
 
-.timeline-item.left {
-    left: 0;
-}
-
-.timeline-item.right {
-    left: 50%;
-}
-
-.timeline-item.right::after {
-    left: -12px;
-}
-
+/* Contenido de cada elemento */
 .timeline-content {
-    padding: 20px 30px;
-    background-color: #fff;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    height: auto; /* Ajusta la altura automáticamente */
+    min-height: 150px; /* Altura mínima para evitar cajas muy pequeñas */
+    display: flex;
+    justify-content: flex-start;
 }
 
+/* Efecto hover en el contenido */
 .timeline-content:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-content h3 {
+/* Título de cada elemento */
+.timeline-content span {
     color: #f44336;
     margin-bottom: 10px;
+    font-size: 20px; /* Tamaño del título */
+}
+
+/* Lista de logros */
+.timeline-content ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
 }
 
 .timeline-content li {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    line-height: 1.4;
     color: #333;
     margin-bottom: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.timeline-item {
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
+/* Mostrar elementos con animación */
 .timeline-item.visible {
     opacity: 1;
+}
+
+.prueba {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 60px;
+}
+
+.prueba::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: #f44336;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+    z-index: -1;
+    width: 54.8%;
+}
+
+.figura {
+    width: 100%;
+    height: 155px;
+    z-index: 1;
+    position: fixed;
+    top: 233px;
+    border-right: #f44336 8px solid;
 }
 
 /* Botón de inscripción */
@@ -237,12 +285,6 @@ article p {
     margin: 50px 20px 30px 20px;
 }
 
-h3 {
-    font-size: x-large;
-    margin: 20px;
-    width: 95%;
-    text-align: center;
-}
 
 /* Sección de Entrenadores */
 .entrenadores {
@@ -265,6 +307,11 @@ h3 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.contEntrenador p {
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
+}
+
 .imagenTrainer {
     width: 60%;
     border-radius: 170px;
@@ -279,6 +326,9 @@ h4 {
 #mision p {
     padding: 40px;
     text-align: justify;
+    font-size: 1.1em;
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
 }
 
 .valores {
@@ -295,6 +345,8 @@ h4 {
     font-size: 1.1em;
     padding-left: 30px;
     position: relative;
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
 }
 
 .valores ul li::before {
@@ -364,6 +416,18 @@ h4 {
     margin: 0px;
 }
 
+.modal-contenido h3 {
+    font-size: x-large;
+    margin: 20px;
+    width: 95%;
+    text-align: center;
+}
+
+.modal-contenido p,li {
+    font-family: 'Nexa', sans-serif;
+    font-weight: normal;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -388,4 +452,43 @@ h4 {
     border-radius: 50%;
     margin: 15px auto;
     display: block;
+}
+
+/* --- Modal Linea De Tiempo --- */
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content ul {
+    list-style-type: disc; /* Viñetas redondas */
+    padding-left: 20px; /* Espaciado para las viñetas */
+}
+
+.modal-content li {
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
 }

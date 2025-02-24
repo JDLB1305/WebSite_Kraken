@@ -1,0 +1,41 @@
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    background-color: #25d366;
+    border-radius: 80%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3sease, box-shadow 0.3sease;
+    height: 50px;
+}
+
+.whatsapp-button img {
+    width: 104%;
+    height: 50px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Sobre Nosotros ---- */
+.whatsapp-button-SN {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    background-color: #25d366;
+    border-radius: 80%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3sease, box-shadow 0.3sease;
+    width: 5%;
+    height: 68px;
+}
+
+.whatsapp-button-SN .iconoWP {
+    width: 104%;
+}
