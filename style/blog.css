@@ -22,7 +22,7 @@ h1 {
 
 .blog {
     width: 90%;
-    background-color: #8080809c;
+/*     background-color: #8080809c;*/
     margin: 30px;
     padding: 35px;
     display: flex;
@@ -32,7 +32,8 @@ h1 {
 }
 
 .blog img {
-    width: 30%;
+/*     width: 30%;*/
+    width: 15%;
     align-content: center;
 }
 
@@ -44,5 +45,10 @@ h1 {
 .blog p {
     width: 100%;
     text-align: justify;
+    margin: 30px;
+}
+
+.blog .textoNop {
+    font-size: x-large;
     margin: 30px;
 }
