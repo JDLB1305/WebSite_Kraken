@@ -9,6 +9,10 @@
     src: url('Nexa Bold.otf') format('opentype');
 }
 
+.menu-icon {
+    display: none;
+}
+
 nav {
     width: 100%;
     background-color: #F44336;
@@ -42,6 +46,10 @@ nav ul li a {
 
 nav .logoNav {
     width: 10%;
+}
+
+.logoNav2 {
+    display: none;
 }
 
 /* Footer */
@@ -84,3 +92,101 @@ footer h3 {
     text-align: center;
     margin-bottom: 20px;
 }
+
+@media (max-width: 640px) {
+    
+    header {position: fixed;
+        width: 100%;
+        z-index: 3;
+        top: 0;
+    }
+
+    nav {
+      width: 90%;
+      background-color: #F44336;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 80px;
+      padding: 0 20px;
+      z-index: 9;
+    }
+    nav .menu-icon {
+      display: block;
+    }
+    nav ul {
+      display: none; /* Oculta el menú */
+      flex-direction: column;
+      width: 103%;
+      text-align: center;
+      background-color: black;
+      position: absolute;
+      top: 80px;
+      left: 0;
+    }
+    nav ul.show {
+      display: flex; /* Muestra el menú cuando se haga clic */
+      z-index: 3;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+
+    nav ul .logoNav {
+        display: none;
+    }
+
+    nav .logoNav2 {
+        width: 50%;
+        display: block;
+        margin: 60px;
+    }
+
+    .navAboutUs {
+      width: 100%;
+      background-color: #F44336;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 80px;
+      padding: 0 20px;
+      z-index: 9;
+    }
+
+    .navServicios {
+      width: 90%;
+      background-color: #F44336;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 80px;
+      padding: 0 20px;
+      z-index: 9;
+    }
+
+    .navServicios ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: black;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      padding: 5px;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: black;
+      position: relative;
+      z-index: 10;
+  }
+
+    .footerNoticias {
+      position: absolute;
+      top: 40em;
+    }
+  }

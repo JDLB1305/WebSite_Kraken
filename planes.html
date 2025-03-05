@@ -12,19 +12,25 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="menu-icon" id="iconoMenu">
+                &#9776; <!-- Icono hamburguesa -->
+            </div>
+            <ul id="menu1" class="menu"> <!-- Primer menú con id único -->
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
                 <li><a href="./blog.html">Noticias</a></li>
-            </ul>
+
         
             <img src="./images/LOGO-SIMP.png" class="logoNav" alt="logoIngVisualNAVEGACION">
-
-            <ul>
+    
+            
                 <li><a href="./planes.html">Planes y Precios</a></li>
                 <li><a href="./servicios.html">Servicios</a></li>
                 <li><a href="./contacto.html">Contactanos</a></li>
             </ul>
+
+            <img src="./images/LOGO-SIMP.png" class="logoNav2" alt="logoIngVisualNAVEGACION">
+
         </nav>
     </header>
 
@@ -94,8 +100,8 @@
         </div>
 
         <div class="contPlan">
-            <div class="card-header">Equipo</div>
-            <div class="plan">
+            <div class="card-header-equipo">Equipo</div>
+            <div class="planEquipo">
                 <ul>
                     <li>24 entrenamientos al mes</li>
                 </ul>
@@ -134,5 +140,7 @@
     <a href="https://wa.me/573224060648" class="whatsapp-button" target="_blank">
         <img src="./images/whatsapp.png" alt="WhatsApp">
     </a>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>

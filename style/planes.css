@@ -147,3 +147,72 @@ a {
     color: black;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+    
+    .cabezera {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 7em;
+    }
+
+    .logOjo {
+        display: none;
+    }
+
+    .textoCab {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        width: auto;
+    }
+
+    .planes {
+        display: flex;
+        margin: 45px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-header {
+        width: 40%;
+    }
+    
+    .contPlan{
+        margin-bottom: 60px;
+    }
+
+    .planEquipo {
+        width: 70%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        color: white;
+        border: solid white 1px;
+        border-radius: 30px;
+        background-color: transparent;
+        box-shadow: inset 90px -50px 50px -40px #ffffff8f;
+    }
+
+    .card-header-equipo{
+        width: 30%;
+        background: linear-gradient(90deg, #3c0762, #ff00e5);
+        border-radius: 30px;
+        padding: 10px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: white;
+        position: absolute;
+        margin: 3px 8px 0px 73px;
+        z-index: 1;
+    }
+}

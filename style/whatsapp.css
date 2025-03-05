@@ -33,9 +33,39 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3sease, box-shadow 0.3sease;
     width: 5%;
-    height: 68px;
+    height: 70px;
 }
 
 .whatsapp-button-SN .iconoWP {
     width: 104%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #25d366;
+        border-radius: 80%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3sease, box-shadow 0.3sease;
+        height: 50px;
+    }
+
+    .whatsapp-button-SN {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #25d366;
+        border-radius: 80%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3sease, box-shadow 0.3sease;
+        height: 70px;
+    }
+    
 }

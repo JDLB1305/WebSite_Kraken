@@ -114,3 +114,33 @@ form button {
 .iconos-redes a img:hover {
     transform: scale(1.1); /* Efecto de escala al pasar el mouse */
 }
+
+@media screen and (max-width: 768px) {
+
+    .contContacto {
+        background-color: #0000008a;
+        padding: 10px;
+        margin: 100px 10px 10px 10px;
+    }
+
+    .contForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        display: flex;
+        margin: 20px;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .fotoContacto {
+        display: none;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
