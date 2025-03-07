@@ -29,6 +29,7 @@ h1 {
 .contBlog {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .blog {
@@ -43,8 +44,7 @@ h1 {
 }
 
 .blog img {
-/*     width: 30%;*/
-    width: 15%;
+    width: 40%;
     align-content: center;
 }
 
