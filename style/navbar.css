@@ -62,6 +62,11 @@ footer {
     background-color: black;
   }
 
+.footerNoticias {
+  position: relative;
+  bottom: -100px;
+}
+
 footer p{
     color: white;
 }
@@ -154,7 +159,7 @@ footer h3 {
     }
 
     .navServicios {
-      width: 90%;
+      width: 100%;
       background-color: #F44336;
       display: flex;
       align-items: center;
@@ -186,7 +191,6 @@ footer h3 {
   }
 
     .footerNoticias {
-      position: absolute;
-      top: 40em;
+      bottom: -100px;
     }
   }

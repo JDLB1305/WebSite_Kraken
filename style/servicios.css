@@ -106,7 +106,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .servicio {
-        width: calc(50% - 40px);
+        width: 80%;
     }
 
     .servicios h1 {
