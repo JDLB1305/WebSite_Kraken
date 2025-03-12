@@ -152,6 +152,18 @@ article p {
     padding: 100px 0px 0px;
 }
 
+.linea1 {
+    display: block;
+}
+
+.linea2 {
+    display: none;
+}
+
+.linea3 {
+    display: none;
+}
+
 /* Línea central de la línea de tiempo */
 .timeline::after {
     content: '';
@@ -222,7 +234,7 @@ article p {
 .timeline-content span {
     color: #f44336;
     margin-bottom: 10px;
-    font-size: 20px; /* Tamaño del título */
+    font-size: 18px; /* Tamaño del título */
 }
 
 /* Lista de logros */
@@ -271,6 +283,10 @@ article p {
     position: fixed;
     top: 233px;
     border-right: #f44336 8px solid;
+}
+
+.timeline-row, .timeline-rowultimate {
+    display: none;
 }
 
 /* Botón de inscripción */
@@ -563,17 +579,30 @@ h4 {
         margin: 30px 8px 0px 8px;
     }
 
-    #logros1 {
+    .prueba {
         display: none;
     }
-    
-    #logros2 {
-        display: block;
+
+    .prueba2 {
+        display: contents;
     }
+    
 
     .timeline {
         position: relative;
         padding: 30px 0px 0px;
+    }
+
+    .linea1 {
+        display: none;
+    }
+
+    .linea2 {
+        display: block;
+    }
+
+    .linea3 {
+        display: none;
     }
 
     .timeline-content {
@@ -607,13 +636,31 @@ h4 {
         position: absolute;
         height: 6px;
         background-color: #f44336;
-        top: 16.9%;
+        top: 20.5%;
         left: 2%;
         right: 0;
         transform: translateY(-50%);
         border-radius: 3px;
         z-index: -1;
-        width: 93%;
+        width: 99%;
+    }
+
+    .prueba2::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: -41%;
+        left: 2%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 99%;
+    }
+
+    .timeline-item.visible {
+        z-index: 3;
+        left: 2%;
     }
 
     .figura {
@@ -622,7 +669,7 @@ h4 {
         z-index: 1;
         position: fixed;
         top: 145px;
-        right: 16px;
+        right: -5px;
         border-right: #f44336 8px solid;
     }
 
@@ -632,7 +679,7 @@ h4 {
         z-index: 1;
         position: fixed;
         top: 245px;
-        right: 307px;
+        right: 420px;
         border-right: #f44336 8px solid;
     }
 
@@ -641,8 +688,8 @@ h4 {
         height: 100px;
         z-index: 1;
         position: fixed;
-        top: 344px;
-        right: 15px;
+        top: 243px;
+        right: 360px;
         border-right: #f44336 8px solid;
     }
 
@@ -651,13 +698,14 @@ h4 {
         height: 100px;
         z-index: 1;
         position: fixed;
-        top: 445px;
-        right: 307px;
+        top: 344px;
+        right: 6px;
         border-right: #f44336 8px solid;
     }
 
     .timeline-row {
         position: relative;
+        display: block;
     }
     
     .timeline-row::after {
@@ -665,13 +713,35 @@ h4 {
         position: absolute;
         height: 6px;
         background-color: #f44336;
-        top: 60%;
+        top: 59%;
         left: 2%;
         right: 0;
         transform: translateY(-50%);
         border-radius: 3px;
         z-index: -1;
-        width: 93%;
+        width: 96%;
+    }
+
+    .timeline-rowultimate {
+        display: block;
+    }
+
+    .timeline-rowultimate::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: 59%;
+        left: 48%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 50%;
+    }
+
+    .timeline-rowultimate .timeline-item.visible {
+        left: 50%;
     }
 
     .modal-content {
@@ -738,4 +808,129 @@ h4 {
         width: auto;
     }
 }
+
+/*---- Iphone y otros dispositivos ----*/
+
+@media (max-width: 360px) {
+    .linea2 {
+        display: none;
+    }
+
+    .linea3 {
+        display: block;
+    }
+
+    .timeline-item.visible {
+        z-index: 3;
+        left: 8%;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: 16.5%;
+        left: 2%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 99%;
+    }
+
+    .prueba2::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: -140%;
+        left: 2%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 99%;
+    }
+    
+    .timeline-row::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: -40%;
+        left: 2%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 96%;
+    }
+
+    .timeline-row2 {
+        display: contents;
+    }
+
+    .timeline-row2::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: 59%;
+        left: 2%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 96%;
+    }
+
+    .timeline-rowultimate {
+        left: -44%;
+    }
+
+    .timeline-rowultimate::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: 59%;
+        left: 46%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 96%;
+    }
+
+
+    .figura {
+        width: 100%;
+        height: 105px;
+        z-index: 1;
+        position: fixed;
+        top: 140px;
+        right: -3px;
+        border-right: #f44336 8px solid;
+    }
+
+    .figura3 {
+        width: 100%;
+        height: 102px;
+        z-index: 1;
+        position: fixed;
+        top: 76%;
+        right: 96%;
+        border-right: #f44336 8px solid;
+    }
+
+    .figura5 {
+        width: 100%;
+        height: 103px;
+        z-index: 131;
+        position: fixed;
+        top: 243px;
+        right: 96%;
+        border-right: #f44336 8px solid;
+    }
+  }
 
