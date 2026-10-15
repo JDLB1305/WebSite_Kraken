@@ -269,11 +269,11 @@ article p {
     height: 6px;
     background-color: #f44336;
     top: 50%;
-    left: 50%;
+    left: 42%;
     transform: translateY(-50%);
     border-radius: 3px;
     z-index: -1;
-    width: 54.8%;
+    width: 62.8%;
 }
 
 .figura {
@@ -707,8 +707,27 @@ h4 {
         position: relative;
         display: block;
     }
+
+    .timeline-row3 {
+        position: relative;
+        display: block;
+    }
     
     .timeline-row::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background-color: #f44336;
+        top: 59%;
+        left: 2%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        z-index: -1;
+        width: 96%;
+    }
+
+        .timeline-row3::after {
         content: '';
         position: absolute;
         height: 6px;
@@ -822,7 +841,7 @@ h4 {
 
     .timeline-item.visible {
         z-index: 3;
-        left: 8%;
+        left: 11%;
     }
 
     .timeline::after {
