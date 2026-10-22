@@ -238,7 +238,7 @@ a {
 
     .planes {
         display: flex;
-        margin: 0px 45px;
+/*         margin: 0px 45px; */
         flex-direction: column;
         align-items: center;
     }
@@ -260,9 +260,15 @@ a {
         border-radius: 30px;
     }
 
+    .caj2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
     .planEquipo {
-        width: 70%;
-        height: 90px;
+/*         width: 70%;
+        height: 90px; */
         display: flex;
         flex-direction: column;
         align-items: center;
